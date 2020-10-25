@@ -86,6 +86,29 @@ figcaption {
 	display: none;
 }
 
+.toggle-collapse {
+	float: right;
+	width: 45px;
+	height: 32px;
+	margin: 0.4em 0.7em;
+	background-color: transparent;
+	color: rgba(58, 206, 194, .7);
+	border: 2px solid rgba(58, 206, 194, .3);
+	border-radius: 3px;
+	z-index: 1000;
+	cursor: pointer;
+	display: none;
+}
+
+.i fas {
+	color: red;
+	z-index: 1001;
+}
+
+.toggle-collapse:hover {
+	color: rgb(58, 206, 194);
+}
+
 /* ---- Layout Containers ---- */
 
 .main-header {
@@ -130,29 +153,46 @@ figcaption {
 	position: absolute;
 	top: -15px;
 	left: -15px;
+	z-index: 1;
 }
 
 /* ================================= 
 	Media Queries
 ==================================== */
 
-@media screen and (max-width: 600px) {
-	.main-nav.responsive {
-		position: relative;
-	}
-	.main-nav.responsive a.icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	.main-nav.responsive a {
-		float: none;
+@media screen and (max-width:456px) {
+	.toggle-collapse {
 		display: block;
-		text-align: left;
+	}
+	.main-nav {
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+		height: 0vh;
+		transition: all 499ms ease;
+	}
+	.name {
+		float: left;
+	}
+	.collapse {
+		height: 90vh;
 	}
 }
 
 @media (min-width: 769px) {
+
+	.body {
+		padding-top: 68px;
+	}
+
+	.main-header {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+	}
 	.container {
 		width: 90%;
 		margin: 0 auto;

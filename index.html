@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Best City Guide</title>
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,6 +13,9 @@
 	<header class="main-header">
 		<div class="container clearfix">
 			<h1 class="name"><a href="#">Best City Guide</a></h1>
+			<button class="toggle-collapse">
+				<i class="fas fa-bars fa-lg"></i>
+			</button>
 			<ul class="main-nav">
 				<li><a href="#">ice cream</a></li>
 				<li><a href="#">donuts</a></li>
@@ -64,5 +68,15 @@
 		<span>&copy;2015 Residents of The Best City Ever.</span>
 	</footer>
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.toggle-collapse').click(function(){
+				$('.main-nav').toggleClass("collapse")
+			})
+		});
+	</script>
+
 </body>
 </html>
