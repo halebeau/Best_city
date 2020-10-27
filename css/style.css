@@ -43,7 +43,7 @@ figcaption {
 	font-size: .9em;
 	line-height: 1.5;
 	color: #fff;
-	padding: 1em;	
+	padding: .5em;	
 	background: rgba(19,43,102, .85);
 
 	position: absolute;
@@ -93,16 +93,11 @@ figcaption {
 	margin: 0.4em 0.7em;
 	background-color: transparent;
 	color: rgba(58, 206, 194, .7);
-	border: 2px solid rgba(58, 206, 194, .3);
+	border: none;
 	border-radius: 3px;
 	z-index: 1000;
 	cursor: pointer;
 	display: none;
-}
-
-.i fas {
-	color: red;
-	z-index: 1001;
 }
 
 .toggle-collapse:hover {
@@ -125,6 +120,7 @@ figcaption {
 	background: #3acec2;
 	padding: 3.2em 0;
 	margin-bottom: 60px;
+	
 }
 
 .col {
@@ -170,12 +166,17 @@ figcaption {
 		text-align: center;
 		height: 0vh;
 		transition: all 499ms ease;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+		top: 0;
 	}
 	.name {
 		float: left;
 	}
 	.collapse {
-		height: 90vh;
+		height: 35vh;
+	}
+	.main-header {
+		padding-bottom: .1em;
 	}
 }
 
@@ -221,7 +222,7 @@ figcaption {
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	.container {
 		width: 80%;
 		max-width: 1150px;
@@ -231,5 +232,8 @@ figcaption {
 	}
 	.secondary, .tertiary {
 		width: 30%;
+	}
+	.banner {
+		padding-top: 6em;
 	}
 }
