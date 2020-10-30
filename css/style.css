@@ -10,6 +10,20 @@ body {
 	font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
+	margin: 0;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.row {
+    flex: 1;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 p {
@@ -45,7 +59,6 @@ figcaption {
 	color: #fff;
 	padding: .5em;	
 	background: rgba(19,43,102, .85);
-
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -58,7 +71,7 @@ figcaption {
 /* ---- Navigation ---- */
 
 .name {
-	font-size: 1.25em;
+	font-size: 1.35em;
 	margin: 0;
 }
 
@@ -119,13 +132,13 @@ figcaption {
 	color: #fff;
 	background: #3acec2;
 	padding: 3.2em 0;
-	margin-bottom: 60px;
-	
+	margin-bottom: 48px;
 }
-
 .col {
-	padding-right: 1em;
-	padding-left: 1em;
+	padding: 1em;
+	background: #edf4f7;
+	border-radius: .35em;
+	margin: 0 .5em .8em;
 }
 
 .main-footer {
@@ -144,12 +157,24 @@ figcaption {
 	margin-bottom: 0;
 }
 
+.feat-img {
+	border-radius: 5px;
+}
+
 .icon-location {
 	width: 35px;
 	position: absolute;
 	top: -15px;
 	left: -15px;
 	z-index: 1;
+}
+
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #3acec2;
+	border-radius: .35em;
 }
 
 /* ================================= 
@@ -173,14 +198,14 @@ figcaption {
 		float: left;
 	}
 	.collapse {
-		height: 35vh;
+		height: 65vh;
 	}
 	.main-header {
 		padding-bottom: .1em;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
 	.body {
 		padding-top: 68px;
@@ -194,6 +219,24 @@ figcaption {
 		top: 0;
 		z-index: 1000;
 	}
+	.main-header, 
+    .main-nav,
+    .row,
+    .col {
+        display: flex;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col {
+        flex: 1;
+        flex-direction: column;
+    }
+    .button {
+        margin-top: auto;
+        align-self: flex-start;
+    }
 	.container {
 		width: 90%;
 		margin: 0 auto;
@@ -214,15 +257,9 @@ figcaption {
 	.tagline {
 		font-size: 1.4em;
 	}
-	/* ---- Float clearfix ---- */
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 	.container {
 		width: 80%;
 		max-width: 1150px;
@@ -236,4 +273,11 @@ figcaption {
 	.banner {
 		padding-top: 6em;
 	}
+	.main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .primary {
+        flex: 1;
+    }
 }
